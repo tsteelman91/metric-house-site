@@ -1,0 +1,114 @@
+/* components/Contact.module.css */
+
+.contact {
+  padding: 120px 0;
+  background: var(--ink);
+  scroll-margin-top: 60px;
+}
+
+.inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 24px;
+}
+
+.h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -1.6px;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.h2 em {
+  font-style: italic;
+  color: #cfd6dc;
+}
+
+.body {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  color: rgba(255, 253, 246, 0.66);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.mailBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 14px 22px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  color: var(--white);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.mailBox:hover {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.mailBox:hover .mailLabel {
+  color: rgba(20, 19, 15, 0.55);
+}
+
+.mailBox:hover .mailAddress {
+  color: var(--ink);
+}
+
+.mailBox:hover .mailArrow {
+  color: var(--ink);
+}
+
+.mailInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mailLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.8px;
+  transition: color 150ms ease;
+}
+
+.mailAddress {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 26px;
+  transition: color 150ms ease;
+}
+
+.mailArrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 150ms ease;
+}
+
+@media (max-width: 880px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .inner {
+    padding: 0 24px;
+  }
+}
