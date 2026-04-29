@@ -1,0 +1,108 @@
+/* components/Footer.module.css */
+
+.footer {
+  background: var(--paper);
+  padding: 52px 0 40px;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colHeading {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ink-3);
+  margin-bottom: 4px;
+}
+
+.colLink {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.colLink:hover {
+  color: var(--ink);
+}
+
+.colMuted {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+@media (max-width: 880px) {
+  .inner {
+    padding: 0 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
