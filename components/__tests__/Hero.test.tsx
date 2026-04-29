@@ -9,8 +9,8 @@ describe('Hero', () => {
   });
 
   it('renders the italic "actually" emphasis', () => {
-    render(<Hero />);
-    const em = document.querySelector('em');
+    const { container } = render(<Hero />);
+    const em = container.querySelector('em');
     expect(em).toBeInTheDocument();
     expect(em?.textContent).toBe('actually');
   });
