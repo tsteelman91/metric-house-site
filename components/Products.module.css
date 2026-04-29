@@ -1,0 +1,431 @@
+/* components/Products.module.css */
+
+.products {
+  padding: 100px 0 110px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 60px;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+
+.h2 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.02;
+  letter-spacing: -1px;
+}
+
+.headerNote {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--ink-3);
+  max-width: 240px;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 56px;
+  padding: 44px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.card + .card {
+  border-top: 1px solid var(--rule);
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.productTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.productNum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.productStatus {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.productName {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -1.4px;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--ink-2);
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.blurb {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+.stats {
+  border-top: 1px dashed var(--rule);
+  border-bottom: 1px dashed var(--rule);
+  margin-bottom: 24px;
+}
+
+.stat {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  align-items: baseline;
+}
+
+.stat + .stat {
+  border-top: 1px dashed var(--rule);
+}
+
+.statLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ink-3);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.statValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+  align-self: flex-start;
+  transition: gap 150ms ease, border-color 150ms ease;
+  margin-top: auto;
+}
+
+.productLink:hover {
+  gap: 12px;
+  border-color: var(--accent);
+}
+
+.arrow {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Browser window mockup ── */
+
+.productVisual {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--white);
+  overflow: hidden;
+  align-self: start;
+  min-height: 360px;
+}
+
+.browserChrome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--paper-2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.chromeLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lockIcon {
+  color: var(--ink-4);
+  font-size: 7px;
+}
+
+.statusLive {
+  color: var(--accent);
+}
+
+.statusComingSoon {
+  color: var(--ink-3);
+}
+
+.browserBody {
+  padding: 22px;
+}
+
+/* ── Knowmad mockup ── */
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 24px;
+  padding: 8px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--ink-3);
+  margin-bottom: 16px;
+}
+
+.searchText {
+  flex: 1;
+}
+
+.pillInk {
+  background: var(--ink);
+  color: var(--white);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 24px;
+}
+
+.pillPaper {
+  background: var(--paper-3);
+  color: var(--ink-2);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 24px;
+}
+
+.map {
+  height: 220px;
+  background: var(--paper-2);
+  position: relative;
+  background-image:
+    linear-gradient(var(--rule-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule-soft) 1px, transparent 1px);
+  background-size: 28px 28px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transform: translate(-50%, -100%);
+}
+
+.pinLabel {
+  background: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  color: var(--ink);
+}
+
+.pinDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.pinDotAccent {
+  background: var(--accent);
+}
+
+.pinDotWarm {
+  background: var(--warm);
+}
+
+.pinDotLarge {
+  width: 18px;
+  height: 18px;
+}
+
+.mapLegend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--ink-3);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legendSwatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendSwatchWarm {
+  background: var(--warm);
+}
+
+.legendSwatchAccent {
+  background: var(--accent);
+}
+
+.legendRight {
+  margin-left: auto;
+}
+
+/* ── Formulate mockup ── */
+
+.docHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.issuesFlagged {
+  color: var(--warm);
+}
+
+.question {
+  border-left: 2px solid transparent;
+  padding: 10px 0 12px 14px;
+  margin-bottom: 14px;
+}
+
+.questionAccent {
+  border-left-color: var(--accent);
+}
+
+.questionWarm {
+  border-left-color: var(--warm);
+}
+
+.questionNum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--ink-3);
+  margin-bottom: 5px;
+}
+
+.questionText {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.questionHint {
+  color: var(--ink-3);
+}
+
+.highlight {
+  background: linear-gradient(
+    transparent 60%,
+    color-mix(in oklab, var(--warm) 25%, transparent) 60%
+  );
+  padding: 0 1px;
+  color: var(--ink);
+}
+
+.questionFlag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--warm);
+  margin-top: 8px;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 880px) {
+  .products {
+    padding: 64px 0;
+  }
+
+  .inner {
+    padding: 0 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .headerNote {
+    text-align: left;
+    max-width: none;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
