@@ -22,9 +22,9 @@ export function About() {
             realized the surveys we needed didn&apos;t exist either.
           </p>
           <p className={styles.prose}>
-            That&apos;s the pattern. We notice a workflow that&apos;s quietly bad — the kind of
-            thing people accept because they assume it&apos;s fixed — and we go build the version
-            we&apos;d actually want to use. Then we ship it.
+            That&apos;s the pattern. We notice a workflow that&apos;s quietly broken. The kind of
+            thing people put up with because they think it&apos;s just how it is. We build the
+            version we&apos;d actually want to use and ship it.
           </p>
           <div className={styles.principles}>
             <div className={styles.principle}>

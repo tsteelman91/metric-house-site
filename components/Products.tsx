@@ -121,12 +121,12 @@ export function Products() {
             </div>
             <h3 className={styles.productName}>Knowmad</h3>
             <p className={styles.tagline}>
-              A remote-work discovery app for finding the right place to work — today, near you.
+              Find the right place to work. Today, near you.
             </p>
             <p className={styles.blurb}>
-              Tell Knowmad what kind of work you&apos;re doing — focus, light, alone, with a group
-              — and it matches you with cafés, libraries, and coworking spots in your area that fit.
-              No more rolling the dice on a noisy bakery at 9am.
+              Tell Knowmad what you need: focus work, light tasks, solo or with a group. It matches
+              you with cafés, libraries, and coworking spots nearby that actually fit. No more
+              rolling the dice on a noisy bakery at 9am.
             </p>
             <dl className={styles.stats}>
               <div className={styles.stat}>
