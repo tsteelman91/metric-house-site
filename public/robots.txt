@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://metric-house.com/sitemap.xml
