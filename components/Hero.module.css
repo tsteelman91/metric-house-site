@@ -1,0 +1,152 @@
+/* components/Hero.module.css */
+
+.hero {
+  padding: 96px 0 80px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 60px;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 56px;
+  align-items: end;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  font-size: 8px;
+  color: var(--warm);
+  line-height: 1;
+}
+
+.h1 {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(56px, 8vw, 104px);
+  line-height: 0.98;
+  letter-spacing: -1.6px;
+  margin-bottom: 28px;
+}
+
+.h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.subhead {
+  font-family: 'Inter', sans-serif;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--ink);
+  padding: 11px 18px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 150ms ease;
+}
+
+.primaryCta:hover {
+  background: var(--accent);
+}
+
+.ghostCta {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  padding: 11px 18px;
+  border-radius: 3px;
+  transition: border-color 150ms ease;
+}
+
+.ghostCta:hover {
+  border-color: var(--ink);
+}
+
+.meta {
+  border-left: 1px solid var(--rule);
+  padding-left: 22px;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metaLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ink-3);
+}
+
+.metaValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+@media (max-width: 880px) {
+  .hero {
+    padding: 64px 0;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .meta {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+}
