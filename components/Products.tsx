@@ -59,7 +59,7 @@ function FormulateMockup() {
           <span className={styles.lockIcon}>▬</span>
           <span>formulatesurveys.com</span>
         </div>
-        <span className={styles.statusComingSoon}>● coming soon</span>
+        <span className={styles.statusLive}>● live</span>
       </div>
       <div className={styles.browserBody}>
         <div className={styles.docHeader}>
@@ -155,7 +155,7 @@ export function Products() {
           <div className={styles.cardMeta}>
             <div className={styles.productTag}>
               <span className={styles.productNum}>P/02</span>
-              <span className={styles.productStatus}>In development</span>
+              <span className={styles.productStatus}>Live</span>
             </div>
             <h3 className={styles.productName}>Formulate</h3>
             <p className={styles.tagline}>
@@ -170,7 +170,7 @@ export function Products() {
             <dl className={styles.stats}>
               <div className={styles.stat}>
                 <dt className={styles.statLabel}>Stage</dt>
-                <dd className={styles.statValue}>Active development</dd>
+                <dd className={styles.statValue}>Live</dd>
               </div>
               <div className={styles.stat}>
                 <dt className={styles.statLabel}>For</dt>
