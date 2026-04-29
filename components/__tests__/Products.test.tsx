@@ -28,7 +28,7 @@ describe('Products', () => {
     const link = screen.getByRole('link', { name: /visit knowmad\.work/i });
     expect(link).toHaveAttribute('href', 'https://knowmad.work');
     expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('rel', 'noopener');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('formulate link has correct href and opens new tab', () => {
@@ -36,7 +36,7 @@ describe('Products', () => {
     const link = screen.getByRole('link', { name: /visit formulatesurveys\.com/i });
     expect(link).toHaveAttribute('href', 'https://formulatesurveys.com');
     expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('rel', 'noopener');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('product visuals are aria-hidden', () => {

@@ -22,7 +22,7 @@ export function Footer() {
               href="https://knowmad.work"
               className={styles.colLink}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Knowmad ↗
             </a>
@@ -30,7 +30,7 @@ export function Footer() {
               href="https://formulatesurveys.com"
               className={styles.colLink}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Formulate ↗
             </a>

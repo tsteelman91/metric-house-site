@@ -11,14 +11,14 @@ describe('Footer', () => {
     render(<Footer />);
     const link = screen.getByRole('link', { name: /knowmad ↗/i });
     expect(link).toHaveAttribute('href', 'https://knowmad.work');
-    expect(link).toHaveAttribute('rel', 'noopener');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('renders Formulate footer link with noopener', () => {
     render(<Footer />);
     const link = screen.getByRole('link', { name: /formulate ↗/i });
     expect(link).toHaveAttribute('href', 'https://formulatesurveys.com');
-    expect(link).toHaveAttribute('rel', 'noopener');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('renders mailto link', () => {

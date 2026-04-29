@@ -142,7 +142,7 @@ export function Products() {
               href="https://knowmad.work"
               className={styles.productLink}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <span>Visit knowmad.work</span>
               <span className={styles.arrow}>→</span>
@@ -181,7 +181,7 @@ export function Products() {
               href="https://formulatesurveys.com"
               className={styles.productLink}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <span>Visit formulatesurveys.com</span>
               <span className={styles.arrow}>→</span>
