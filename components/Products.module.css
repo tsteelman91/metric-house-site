@@ -169,15 +169,19 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* ── Browser window mockup ── */
+/* ── Product screenshot ── */
 
 .productVisual {
   border: 1px solid var(--rule);
   border-radius: 4px;
-  background: var(--white);
   overflow: hidden;
   align-self: start;
-  min-height: 360px;
+}
+
+.screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .browserChrome {

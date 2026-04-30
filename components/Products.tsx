@@ -4,49 +4,11 @@ import styles from './Products.module.css';
 function KnowmadMockup() {
   return (
     <div className={styles.productVisual} aria-hidden="true">
-      <div className={styles.browserChrome}>
-        <div className={styles.chromeLeft}>
-          <span className={styles.lockIcon}>▬</span>
-          <span>knowmad.work</span>
-        </div>
-        <span className={styles.statusLive}>● live</span>
-      </div>
-      <div className={styles.browserBody}>
-        <div className={styles.searchBar}>
-          <span className={styles.searchText}>Today I want to do</span>
-          <span className={styles.pillInk}>focus work</span>
-          <span className={styles.pillPaper}>+ alone</span>
-        </div>
-        <div className={styles.map}>
-          <div className={styles.pin} style={{ left: '22%', top: '38%' }}>
-            <span className={styles.pinLabel}>Carrboro Library</span>
-            <span className={`${styles.pinDot} ${styles.pinDotAccent}`} />
-          </div>
-          <div className={styles.pin} style={{ left: '48%', top: '56%' }}>
-            <span className={styles.pinLabel}>Open Eye Café · 92% match</span>
-            <span className={`${styles.pinDot} ${styles.pinDotWarm} ${styles.pinDotLarge}`} />
-          </div>
-          <div className={styles.pin} style={{ left: '74%', top: '32%' }}>
-            <span className={styles.pinLabel}>Perennial · Durham</span>
-            <span className={`${styles.pinDot} ${styles.pinDotAccent}`} />
-          </div>
-          <div className={styles.pin} style={{ left: '38%', top: '76%' }}>
-            <span className={styles.pinLabel}>Looking Glass</span>
-            <span className={`${styles.pinDot} ${styles.pinDotAccent}`} />
-          </div>
-        </div>
-        <div className={styles.mapLegend}>
-          <span className={styles.legendItem}>
-            <span className={`${styles.legendSwatch} ${styles.legendSwatchWarm}`} />
-            Best match
-          </span>
-          <span className={styles.legendItem}>
-            <span className={`${styles.legendSwatch} ${styles.legendSwatchAccent}`} />
-            Good fit
-          </span>
-          <span className={styles.legendRight}>4 spots within 2.4 mi</span>
-        </div>
-      </div>
+      <img
+        src="/knowmad-screenshot.png"
+        alt=""
+        className={styles.screenshot}
+      />
     </div>
   );
 }
@@ -54,46 +16,11 @@ function KnowmadMockup() {
 function FormulateMockup() {
   return (
     <div className={styles.productVisual} aria-hidden="true">
-      <div className={styles.browserChrome}>
-        <div className={styles.chromeLeft}>
-          <span className={styles.lockIcon}>▬</span>
-          <span>formulatesurveys.com</span>
-        </div>
-        <span className={styles.statusLive}>● live</span>
-      </div>
-      <div className={styles.browserBody}>
-        <div className={styles.docHeader}>
-          <span>onboarding_v3.draft</span>
-          <span className={styles.issuesFlagged}>2 issues flagged</span>
-        </div>
-        <div className={`${styles.question} ${styles.questionAccent}`}>
-          <p className={styles.questionNum}>Q1</p>
-          <p className={styles.questionText}>
-            In the last 7 days, how many days did you open the app?{' '}
-            <span className={styles.questionHint}>(0–7)</span>
-          </p>
-        </div>
-        <div className={`${styles.question} ${styles.questionWarm}`}>
-          <p className={styles.questionNum}>Q2 · Leading</p>
-          <p className={styles.questionText}>
-            Wouldn&apos;t you agree that our{' '}
-            <mark className={styles.highlight}>new dashboard is a major improvement</mark>?
-          </p>
-          <p className={styles.questionFlag}>
-            → rewrite as neutral comparison · cite: Schuman &amp; Presser 1981
-          </p>
-        </div>
-        <div className={`${styles.question} ${styles.questionWarm}`}>
-          <p className={styles.questionNum}>Q3 · Double-barreled</p>
-          <p className={styles.questionText}>
-            How satisfied are you with our{' '}
-            <mark className={styles.highlight}>pricing and support</mark>?
-          </p>
-          <p className={styles.questionFlag}>
-            → split into two questions · cite: DeVellis 2017
-          </p>
-        </div>
-      </div>
+      <img
+        src="/formulate-screenshot.png"
+        alt=""
+        className={styles.screenshot}
+      />
     </div>
   );
 }

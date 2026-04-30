@@ -8,11 +8,13 @@ const PUBLIC = join(process.cwd(), 'public');
 mkdirSync(PUBLIC, { recursive: true });
 
 const MH_PATHS = `
-  <path d="M2 11.5V2.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
-  <path d="M2 2.5L5.2 8" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
-  <path d="M5.2 8L8.4 2.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
-  <path d="M8.4 2.5V11.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
-  <path d="M11 2.5V11.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M1 11.5V2.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M1 2.5L4 8" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M4 8L7 2.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M7 2.5V11.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M9 2.5V11.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M9 7H13" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
+  <path d="M13 2.5V11.5" stroke="#fffdf6" stroke-width="1.4" stroke-linecap="square"/>
 `;
 
 function markSvg(size: number): string {
