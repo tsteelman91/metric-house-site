@@ -19,7 +19,8 @@ export function About() {
             Metric House started in 2026 as a software company built around{' '}
             <em className={styles.productName}>Knowmad</em>, a remote-work discovery app, and grew
             into a second product, <em className={styles.productName}>Formulate</em>, when we
-            realized the surveys we needed didn&apos;t exist either.
+            realized the surveys we needed didn&apos;t exist either. Recruit came next, for the
+            university subject pools that so much of that research depends on.
           </p>
           <p className={styles.prose}>
             That&apos;s the pattern. We notice a workflow that&apos;s quietly broken. The kind of

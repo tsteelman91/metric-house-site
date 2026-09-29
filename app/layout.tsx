@@ -5,11 +5,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Metric House — Software for better workflows',
   description:
-    'Metric House is a software company building Knowmad and Formulate. Tools that help people work better.',
+    'Metric House is a software company building Knowmad, Formulate, and Recruit. Tools that help people work better.',
   openGraph: {
     title: 'Metric House — Software for better workflows',
     description:
-      'Metric House is a software company building Knowmad and Formulate. Tools that help people work better.',
+      'Metric House is a software company building Knowmad, Formulate, and Recruit. Tools that help people work better.',
     url: 'https://metric-house.com',
     siteName: 'Metric House',
     images: [{ url: 'https://metric-house.com/og-image.png', width: 1200, height: 630 }],

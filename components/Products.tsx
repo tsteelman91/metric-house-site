@@ -25,6 +25,18 @@ function FormulateMockup() {
   );
 }
 
+function RecruitMockup() {
+  return (
+    <div className={styles.productVisual} aria-hidden="true">
+      <img
+        src="/recruit-screenshot.png"
+        alt=""
+        className={styles.screenshot}
+      />
+    </div>
+  );
+}
+
 export function Products() {
   return (
     <section id="products" className={styles.products}>
@@ -32,10 +44,10 @@ export function Products() {
         <div className={styles.header}>
           <div>
             <p className={styles.eyebrow}>§02 · Products</p>
-            <h2 className={styles.h2}>Two things, made well.</h2>
+            <h2 className={styles.h2}>Three things, made well.</h2>
           </div>
           <p className={styles.headerNote}>
-            Both are independently developed and supported by Metric House. Click through for full
+            Each is independently developed and supported by Metric House. Click through for full
             product sites.
           </p>
         </div>
@@ -115,6 +127,45 @@ export function Products() {
             </a>
           </div>
           <FormulateMockup />
+        </article>
+
+        <article className={styles.card}>
+          <div className={styles.cardMeta}>
+            <div className={styles.productTag}>
+              <span className={styles.productNum}>P/03</span>
+              <span className={styles.productStatus}>Now piloting</span>
+            </div>
+            <h3 className={styles.productName}>Recruit</h3>
+            <p className={styles.tagline}>
+              Find the right people for research.
+            </p>
+            <p className={styles.blurb}>
+              Recruit runs a university research subject pool in one place. Researchers submit
+              studies for review, coordinators decide what fields and when, and students sign up
+              and earn course credit that is tracked against the right class. Researchers never see
+              student names or IDs, and survey responses stay in the researcher&apos;s own tool.
+            </p>
+            <dl className={styles.stats}>
+              <div className={styles.stat}>
+                <dt className={styles.statLabel}>Stage</dt>
+                <dd className={styles.statValue}>Pilot programs</dd>
+              </div>
+              <div className={styles.stat}>
+                <dt className={styles.statLabel}>For</dt>
+                <dd className={styles.statValue}>University subject pools</dd>
+              </div>
+            </dl>
+            <a
+              href="https://recruit.metric-house.com"
+              className={styles.productLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Visit recruit.metric-house.com</span>
+              <span className={styles.arrow}>→</span>
+            </a>
+          </div>
+          <RecruitMockup />
         </article>
       </div>
     </section>

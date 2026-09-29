@@ -16,8 +16,8 @@ export function Hero() {
           </h1>
           <p className={styles.subhead}>
             We build tools that fix specific, irritating problems in modern work. Finding a good
-            place to focus. Writing a survey that won&apos;t embarrass you. Two products so far.
-            More on the way.
+            place to focus. Writing a survey that won&apos;t embarrass you. Filling a study with the
+            right participants. Three products so far. More on the way.
           </p>
           <div className={styles.ctaRow}>
             <a href="#products" className={styles.primaryCta}>See our products ↓</a>
@@ -37,7 +37,7 @@ export function Hero() {
           </div>
           <div className={styles.metaItem}>
             <dt className={styles.metaLabel}>Products live</dt>
-            <dd className={styles.metaValue}>Knowmad, Formulate</dd>
+            <dd className={styles.metaValue}>Knowmad, Formulate, Recruit</dd>
           </div>
           <div className={styles.metaItem}>
             <dt className={styles.metaLabel}>Hiring</dt>

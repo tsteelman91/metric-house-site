@@ -21,6 +21,13 @@ describe('Footer', () => {
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
+  it('renders Recruit footer link with noopener', () => {
+    render(<Footer />);
+    const link = screen.getByRole('link', { name: /recruit ↗/i });
+    expect(link).toHaveAttribute('href', 'https://recruit.metric-house.com');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
   it('renders mailto link', () => {
     render(<Footer />);
     const link = screen.getByRole('link', { name: /info@metric-house\.com/i });

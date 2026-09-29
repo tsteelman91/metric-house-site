@@ -34,6 +34,14 @@ export function Footer() {
             >
               Formulate ↗
             </a>
+            <a
+              href="https://recruit.metric-house.com"
+              className={styles.colLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Recruit ↗
+            </a>
           </div>
           <div className={styles.col}>
             <p className={styles.colHeading}>Company</p>
