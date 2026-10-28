@@ -10,12 +10,9 @@ describe('About', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders the three values with the corrected Independent copy', () => {
-    render(<About />);
-    expect(screen.getByRole('heading', { name: /specific over general/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /quiet by default/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /independent/i })).toBeInTheDocument();
-    expect(screen.getByText(/move slowly on the things worth getting right/i)).toBeInTheDocument();
+  it('no longer shows the three values', () => {
+    const { container } = render(<About />);
+    expect(container.textContent).not.toMatch(/specific over general|quiet by default|move slowly/i);
   });
 
   it('shows the headshot line', () => {

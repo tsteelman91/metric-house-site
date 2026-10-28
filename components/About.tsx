@@ -1,23 +1,5 @@
 import styles from './About.module.css';
 
-const VALUES = [
-  {
-    num: '01',
-    title: 'Specific over general',
-    body: 'We do a few things and do them properly. No platform, no upsell ladder.',
-  },
-  {
-    num: '02',
-    title: 'Quiet by default',
-    body: 'No tricks, no dark patterns, no growth hacks. In our software or in the work we do for you.',
-  },
-  {
-    num: '03',
-    title: 'Independent',
-    body: 'Self-funded, so we can move slowly on the things worth getting right.',
-  },
-];
-
 export function About() {
   return (
     <section id="about" className={styles.about}>
@@ -51,16 +33,6 @@ export function About() {
               telling a real change from noise. PhD in survey methodology. Based in the Chapel Hill
               area.
             </p>
-          </div>
-
-          <div className={styles.principles}>
-            {VALUES.map((value) => (
-              <div key={value.num} className={styles.principle}>
-                <p className={styles.principleNum}>{value.num}</p>
-                <h3 className={styles.principleTitle}>{value.title}</h3>
-                <p className={styles.principleBody}>{value.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
