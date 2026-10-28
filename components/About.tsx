@@ -37,7 +37,6 @@ export function About() {
             on, and only trust a change that holds up. We do the work and explain it in plain
             English.
           </p>
-          <p className={styles.todo}>TODO(tyler): one sentence, in your words, on why you started GEO.</p>
 
           <div className={styles.person}>
             <img

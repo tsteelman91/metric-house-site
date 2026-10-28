@@ -50,18 +50,6 @@
   margin-bottom: 20px;
 }
 
-/* Visible placeholder for copy Tyler still needs to write */
-.todo {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  line-height: 1.5;
-  color: var(--warm);
-  border: 1px dashed var(--warm);
-  border-radius: 3px;
-  padding: 6px 10px;
-}
-
 .person {
   display: flex;
   gap: 16px;
