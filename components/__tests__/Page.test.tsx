@@ -12,10 +12,11 @@ describe('Home page', () => {
     expect(h1s).toHaveLength(1);
   });
 
-  it('has H2 headings for About, Products, Contact sections', () => {
+  it('has H2 headings for About, Products, GEO, Contact sections', () => {
     render(<Home />);
     expect(screen.getByRole('heading', { level: 2, name: /small studio/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /three things/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: /does it name you/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /hear from you/i })).toBeInTheDocument();
   });
 });

@@ -4,7 +4,7 @@ export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>§03 · Contact</p>
+        <p className={styles.eyebrow}>§04 · Contact</p>
         <h2 className={styles.h2}>
           We&apos;d love to <em>hear from you</em>.
         </h2>

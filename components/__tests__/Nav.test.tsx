@@ -23,6 +23,11 @@ describe('Nav', () => {
     expect(screen.getByRole('link', { name: /^products$/i })).toHaveAttribute('href', '#products');
   });
 
+  it('renders GEO anchor link', () => {
+    render(<Nav />);
+    expect(screen.getByRole('link', { name: /^geo$/i })).toHaveAttribute('href', '#geo');
+  });
+
   it('renders Contact anchor link', () => {
     render(<Nav />);
     expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '#contact');
