@@ -1,15 +1,20 @@
 /* components/Contact.module.css */
 
 .contact {
-  padding: 120px 0;
+  padding: 110px 0;
   background: var(--ink);
+  color: var(--white);
   scroll-margin-top: 60px;
 }
 
 .inner {
-  max-width: 880px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  align-items: start;
 }
 
 .eyebrow {
@@ -17,98 +22,250 @@
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 1.4px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 24px;
+  color: #a8a290;
+  margin-bottom: 20px;
 }
 
 .h2 {
   font-family: 'Instrument Serif', Georgia, serif;
   font-weight: 400;
-  font-size: clamp(48px, 7vw, 96px);
+  font-size: clamp(44px, 5.5vw, 72px);
   line-height: 1;
-  letter-spacing: -1.6px;
-  color: var(--white);
-  margin-bottom: 28px;
+  letter-spacing: -1.2px;
+  margin-bottom: 22px;
 }
 
 .h2 em {
   font-style: italic;
-  color: #cfd6dc;
+  color: #e08a55;
 }
 
 .body {
   font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  color: rgba(255, 253, 246, 0.66);
-  max-width: 560px;
+  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 40px;
+  color: #c9c3b0;
+  max-width: 400px;
 }
 
-.mailBox {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 18px 14px 22px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  text-decoration: none;
-  color: var(--white);
-  transition: background 150ms ease, border-color 150ms ease;
+/* ---------- Form ---------- */
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 12px;
 }
 
-.mailBox:hover {
-  background: var(--white);
-  border-color: var(--white);
+.full {
+  grid-column: 1 / -1;
 }
 
-.mailBox:hover .mailLabel {
-  color: rgba(20, 19, 15, 0.55);
+.topics {
+  grid-column: 1 / -1;
+  border: 0;
+  margin-bottom: 4px;
 }
 
-.mailBox:hover .mailAddress {
-  color: var(--ink);
-}
-
-.mailBox:hover .mailArrow {
-  color: var(--ink);
-}
-
-.mailInner {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.mailLabel {
+.legend {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10.5px;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.8px;
-  transition: color 150ms ease;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #a8a290;
+  margin-bottom: 8px;
 }
 
-.mailAddress {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-style: italic;
-  font-size: 26px;
-  transition: color 150ms ease;
+.segments {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 253, 246, 0.18);
+  border-radius: 3px;
+  overflow: hidden;
 }
 
-.mailArrow {
+.segment {
+  flex: 1 1 auto;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #c9c3b0;
+  text-align: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.segment + .segment {
+  border-left: 1px solid rgba(255, 253, 246, 0.18);
+}
+
+.segment:hover {
+  color: var(--white);
+}
+
+.segmentOn {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.segmentOn:hover {
+  color: var(--ink);
+}
+
+.segmentInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.segment:has(.segmentInput:focus-visible) {
+  outline: 2px solid #e08a55;
+  outline-offset: -2px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #a8a290;
+}
+
+.input {
+  font: 15px 'Inter', sans-serif;
+  color: var(--white);
+  background: rgba(255, 253, 246, 0.06);
+  border: 1px solid rgba(255, 253, 246, 0.18);
+  border-radius: 3px;
+  padding: 11px 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+}
+
+.input::placeholder {
+  color: #77725f;
+}
+
+.input:focus {
+  border-color: #e08a55;
+}
+
+.input[aria-invalid='true'] {
+  border-color: #f0a378;
+}
+
+.err {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #f0a378;
+}
+
+.err:empty {
+  display: none;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.formMsg {
+  grid-column: 1 / -1;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  transition: color 150ms ease;
+  color: #f0a378;
+}
+
+.send {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.submit {
+  font: 500 14px 'Inter', sans-serif;
+  background: var(--warm);
+  color: var(--white);
+  border: 0;
+  border-radius: 3px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit:hover {
+  background: #c96a36;
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.alt {
+  font-size: 13.5px;
+  color: #d9d3c0;
+}
+
+.alt a,
+.formMsg a {
+  color: #f6f1e2;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.done {
+  align-self: center;
+}
+
+.done p {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--white);
 }
 
 @media (max-width: 880px) {
   .contact {
-    padding: 80px 0;
+    padding: 72px 0;
   }
 
   .inner {
+    grid-template-columns: 1fr;
     padding: 0 24px;
+    gap: 36px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .segments {
+    flex-direction: column;
+  }
+
+  .segment {
+    text-align: left;
+  }
+
+  .segment + .segment {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 253, 246, 0.18);
   }
 }

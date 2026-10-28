@@ -7,29 +7,18 @@ describe('Nav', () => {
     expect(screen.getByText('Metric House')).toBeInTheDocument();
   });
 
-  it('renders Get in touch CTA with mailto href', () => {
+  it.each([
+    ['How it works', '#geo'],
+    ['About', '#about'],
+    ['Products', '#products'],
+    ['Contact', '#contact'],
+  ])('renders the %s link', (name, href) => {
     render(<Nav />);
-    const cta = screen.getByRole('link', { name: /get in touch/i });
-    expect(cta).toHaveAttribute('href', 'mailto:info@metric-house.com');
+    expect(screen.getByRole('link', { name: new RegExp(`^${name}$`, 'i') })).toHaveAttribute('href', href);
   });
 
-  it('renders About anchor link', () => {
+  it('points the button at the contact form, not email', () => {
     render(<Nav />);
-    expect(screen.getByRole('link', { name: /^about$/i })).toHaveAttribute('href', '#about');
-  });
-
-  it('renders Products anchor link', () => {
-    render(<Nav />);
-    expect(screen.getByRole('link', { name: /^products$/i })).toHaveAttribute('href', '#products');
-  });
-
-  it('renders GEO anchor link', () => {
-    render(<Nav />);
-    expect(screen.getByRole('link', { name: /^geo$/i })).toHaveAttribute('href', '#geo');
-  });
-
-  it('renders Contact anchor link', () => {
-    render(<Nav />);
-    expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '#contact');
+    expect(screen.getByRole('link', { name: /set up a call/i })).toHaveAttribute('href', '#contact');
   });
 });

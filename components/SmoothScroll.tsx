@@ -12,7 +12,10 @@ export function SmoothScroll() {
       const el = document.querySelector(id);
       if (!el) return;
       e.preventDefault();
-      window.scrollTo({ top: (el as HTMLElement).offsetTop - 60, behavior: 'smooth' });
+      // Measure from the page, not the offset parent (<main> is positioned), and clear the sticky nav
+      const navHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 60;
+      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
     };
     document.addEventListener('click', handler);
     return () => document.removeEventListener('click', handler);

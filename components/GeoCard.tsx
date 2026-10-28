@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './Geo.module.css';
+import styles from './GeoCard.module.css';
 
 const PROMPTS = [
   { question: 'best coffee shop to work from in Carrboro?', intro: 'Here are a few spots locals recommend:' },

@@ -2,59 +2,29 @@ import { render, screen } from '@testing-library/react';
 import { Products } from '../Products';
 
 describe('Products', () => {
-  it('renders section H2', () => {
+  it('renders the section label and headline', () => {
     render(<Products />);
-    expect(screen.getByRole('heading', { level: 2, name: /three things/i })).toBeInTheDocument();
+    expect(screen.getByText('§03 · Also from Metric House')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: /we also build software/i })).toBeInTheDocument();
   });
 
-  it('renders three product article elements', () => {
+  it.each([
+    ['Knowmad', 'https://knowmad.work', 'Live in the Triangle'],
+    ['Formulate', 'https://formulatesurveys.com', 'Live'],
+    ['Recruit', 'https://recruit.metric-house.com', 'Piloting'],
+  ])('renders %s with its link and stage', (name, href, stage) => {
+    render(<Products />);
+    expect(screen.getByRole('heading', { level: 3, name })).toBeInTheDocument();
+    const host = href.replace('https://', '');
+    const link = screen.getByRole('link', { name: new RegExp(host.replace(/\./g, '\\.')) });
+    expect(link).toHaveAttribute('href', href);
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(screen.getByText(stage)).toBeInTheDocument();
+  });
+
+  it('has no screenshots or old product copy', () => {
     const { container } = render(<Products />);
-    const articles = container.querySelectorAll('article');
-    expect(articles).toHaveLength(3);
-  });
-
-  it('renders Knowmad H3 heading', () => {
-    render(<Products />);
-    expect(screen.getByRole('heading', { level: 3, name: /knowmad/i })).toBeInTheDocument();
-  });
-
-  it('renders Formulate H3 heading', () => {
-    render(<Products />);
-    expect(screen.getByRole('heading', { level: 3, name: /formulate/i })).toBeInTheDocument();
-  });
-
-  it('renders Recruit H3 heading', () => {
-    render(<Products />);
-    expect(screen.getByRole('heading', { level: 3, name: /recruit/i })).toBeInTheDocument();
-  });
-
-  it('recruit link has correct href and opens new tab', () => {
-    render(<Products />);
-    const link = screen.getByRole('link', { name: /visit recruit\.metric-house\.com/i });
-    expect(link).toHaveAttribute('href', 'https://recruit.metric-house.com');
-    expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-  });
-
-  it('knowmad link has correct href and opens new tab', () => {
-    render(<Products />);
-    const link = screen.getByRole('link', { name: /visit knowmad\.work/i });
-    expect(link).toHaveAttribute('href', 'https://knowmad.work');
-    expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-  });
-
-  it('formulate link has correct href and opens new tab', () => {
-    render(<Products />);
-    const link = screen.getByRole('link', { name: /visit formulatesurveys\.com/i });
-    expect(link).toHaveAttribute('href', 'https://formulatesurveys.com');
-    expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-  });
-
-  it('product visuals are aria-hidden', () => {
-    const { container } = render(<Products />);
-    const visuals = container.querySelectorAll('[aria-hidden="true"]');
-    expect(visuals.length).toBeGreaterThanOrEqual(2);
+    expect(container.querySelector('img')).toBeNull();
+    expect(container.textContent).not.toMatch(/AI-powered|PhD-level|three things/i);
   });
 });

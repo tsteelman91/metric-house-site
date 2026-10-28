@@ -2,23 +2,28 @@ import type { Metadata } from 'next';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import './globals.css';
 
+const TITLE = 'Metric House | How AI describes your business';
+const DESCRIPTION =
+  'Metric House helps local businesses see and improve how ChatGPT and Gemini describe them. A small studio in Chapel Hill, NC, that also builds software for research.';
+// TODO(tyler): new og image that matches the GEO hero.
+const OG_IMAGE = 'https://metric-house.com/og-image.png';
+
 export const metadata: Metadata = {
-  title: 'Metric House — Software for better workflows',
-  description:
-    'Metric House is a software company building Knowmad, Formulate, and Recruit. Tools that help people work better.',
+  title: TITLE,
+  description: DESCRIPTION,
   openGraph: {
-    title: 'Metric House — Software for better workflows',
-    description:
-      'Metric House is a software company building Knowmad, Formulate, and Recruit. Tools that help people work better.',
+    title: TITLE,
+    description: DESCRIPTION,
     url: 'https://metric-house.com',
     siteName: 'Metric House',
-    images: [{ url: 'https://metric-house.com/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Metric House — Software for better workflows',
-    images: ['https://metric-house.com/og-image.png'],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 

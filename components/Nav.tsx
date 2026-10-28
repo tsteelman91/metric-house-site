@@ -10,11 +10,11 @@ export function Nav() {
           <span className={styles.brandName}>Metric House</span>
         </a>
         <nav className={styles.links} aria-label="Main navigation">
+          <a href="#geo" className={styles.navLink}>How it works</a>
           <a href="#about" className={styles.navLink}>About</a>
           <a href="#products" className={styles.navLink}>Products</a>
-          <a href="#geo" className={styles.navLink}>GEO</a>
           <a href="#contact" className={styles.navLink}>Contact</a>
-          <a href="mailto:info@metric-house.com" className={styles.cta}>Get in touch</a>
+          <a href="#contact" className={styles.cta}>Set up a call</a>
         </nav>
       </div>
     </header>

@@ -1,6 +1,12 @@
 import { LogoMark } from './LogoMark';
 import styles from './Footer.module.css';
 
+const PRODUCTS = [
+  { name: 'Knowmad', href: 'https://knowmad.work' },
+  { name: 'Formulate', href: 'https://formulatesurveys.com' },
+  { name: 'Recruit', href: 'https://recruit.metric-house.com' },
+];
+
 export function Footer() {
   return (
     <footer className={styles.footer}>
@@ -12,36 +18,28 @@ export function Footer() {
               <span className={styles.brandName}>Metric House, LLC</span>
             </div>
             <p className={styles.tagline}>
-              Independent software studio. Building the tools we wish existed, one workflow at a
-              time.
+              Independent studio in Chapel Hill. Careful measurement for local businesses, and
+              software for research.
             </p>
           </div>
           <div className={styles.col}>
+            <p className={styles.colHeading}>GEO</p>
+            <a href="#geo" className={styles.colLink}>How it works</a>
+            <a href="#contact" className={styles.colLink}>Set up a call</a>
+          </div>
+          <div className={styles.col}>
             <p className={styles.colHeading}>Products</p>
-            <a
-              href="https://knowmad.work"
-              className={styles.colLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Knowmad ↗
-            </a>
-            <a
-              href="https://formulatesurveys.com"
-              className={styles.colLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Formulate ↗
-            </a>
-            <a
-              href="https://recruit.metric-house.com"
-              className={styles.colLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Recruit ↗
-            </a>
+            {PRODUCTS.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                className={styles.colLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {p.name} ↗
+              </a>
+            ))}
           </div>
           <div className={styles.col}>
             <p className={styles.colHeading}>Company</p>
@@ -58,7 +56,7 @@ export function Footer() {
         </div>
         <div className={styles.bottom}>
           <span>© 2026 Metric House, LLC · All rights reserved</span>
-          <span>v1.0 · Made in NC</span>
+          <span>Est. 2026 · Made in NC</span>
         </div>
       </div>
     </footer>

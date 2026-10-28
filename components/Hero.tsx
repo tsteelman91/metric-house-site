@@ -1,47 +1,53 @@
+import { GeoCard } from './GeoCard';
 import styles from './Hero.module.css';
 
 export function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.inner}>
-        <div className={styles.left}>
-          <p className={styles.eyebrow}>
-            <span className={styles.dot} aria-hidden="true">●</span>
-            Metric House, LLC · Est. 2026 · North Carolina
-          </p>
-          <h1 className={styles.h1}>
-            Software for the<br />
-            way people <em>actually</em><br />
-            want to work.
-          </h1>
-          <p className={styles.subhead}>
-            We build tools that fix specific, irritating problems in modern work. Finding a good
-            place to focus. Writing a survey that won&apos;t embarrass you. Filling a study with the
-            right participants. Three products so far. More on the way.
-          </p>
-          <div className={styles.ctaRow}>
-            <a href="#products" className={styles.primaryCta}>See our products ↓</a>
-            <a href="mailto:info@metric-house.com" className={styles.ghostCta}>
-              info@metric-house.com
-            </a>
+        <div className={styles.top}>
+          <div className={styles.left}>
+            <p className={styles.eyebrow}>
+              <span className={styles.pulse} aria-hidden="true" />
+              Metric House · Chapel Hill, NC
+            </p>
+            <h1 className={styles.h1}>
+              People ask AI where to go now. <em>Does it name you?</em>
+            </h1>
+            <p className={styles.lede}>
+              Your customers are asking ChatGPT and Gemini for the best coffee in town, a plumber
+              who shows up, a dentist who takes their insurance. The answer is a short list, and
+              which businesses make it depends largely on what it can find about them online.
+            </p>
+            <p className={styles.lede}>
+              We show you where you stand today and work on the parts that are in your control.
+            </p>
+            <div className={styles.ctaRow}>
+              <a href="#contact" className={styles.primaryCta}>Set up a call →</a>
+              <a href="#geo" className={styles.ghostCta}>How it works ↓</a>
+            </div>
           </div>
+          <GeoCard />
         </div>
+
         <dl className={styles.meta}>
           <div className={styles.metaItem}>
-            <dt className={styles.metaLabel}>Studio</dt>
-            <dd className={styles.metaValue}>Independent · self-funded</dd>
+            <dt className={styles.metaLabel}>For</dt>
+            <dd className={styles.metaValue}>Local and small businesses</dd>
+          </div>
+          <div className={styles.metaItem}>
+            <dt className={styles.metaLabel}>What you get</dt>
+            <dd className={styles.metaValue}>A plain-English report</dd>
           </div>
           <div className={styles.metaItem}>
             <dt className={styles.metaLabel}>Based</dt>
             <dd className={styles.metaValue}>Chapel Hill, NC</dd>
           </div>
           <div className={styles.metaItem}>
-            <dt className={styles.metaLabel}>Products live</dt>
-            <dd className={styles.metaValue}>Knowmad, Formulate, Recruit</dd>
-          </div>
-          <div className={styles.metaItem}>
-            <dt className={styles.metaLabel}>Hiring</dt>
-            <dd className={styles.metaValue}>Not yet. Say hi anyway.</dd>
+            <dt className={styles.metaLabel}>Also</dt>
+            <dd className={styles.metaValue}>
+              <a href="#products" className={styles.metaLink}>Software for research teams</a>
+            </dd>
           </div>
         </dl>
       </div>

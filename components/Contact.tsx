@@ -1,24 +1,22 @@
+import { ContactForm } from './ContactForm';
 import styles from './Contact.module.css';
 
 export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
+      {/* TODO(tyler): confirm info@ forwards to your inbox. */}
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>§04 · Contact</p>
-        <h2 className={styles.h2}>
-          We&apos;d love to <em>hear from you</em>.
-        </h2>
-        <p className={styles.body}>
-          Questions about Knowmad or Formulate, partnerships, press, or just want to say hi. The
-          inbox is small and we read everything.
-        </p>
-        <a href="mailto:info@metric-house.com" className={styles.mailBox}>
-          <span className={styles.mailInner}>
-            <span className={styles.mailLabel}>WRITE TO US</span>
-            <span className={styles.mailAddress}>info@metric-house.com</span>
-          </span>
-          <span className={styles.mailArrow} aria-hidden="true">↗</span>
-        </a>
+        <div className={styles.intro}>
+          <p className={styles.eyebrow}>§04 · Contact</p>
+          <h2 className={styles.h2}>
+            Start with <em>a conversation</em>.
+          </h2>
+          <p className={styles.body}>
+            Tell us a little about your business, or whatever you&apos;re writing about. We read
+            everything and reply ourselves.
+          </p>
+        </div>
+        <ContactForm />
       </div>
     </section>
   );
