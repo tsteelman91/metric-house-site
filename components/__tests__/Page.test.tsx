@@ -26,8 +26,8 @@ describe('Home page', () => {
     expect(container.querySelectorAll('form')).toHaveLength(1);
   });
 
-  it('has no em dashes, gmail, geo@ or old product copy', () => {
+  it('has no em dashes, geo@, info@ or old product copy', () => {
     const { container } = render(<Home />);
-    expect(container.innerHTML).not.toMatch(/\u2014|gmail\.com|geo@|AI-powered|Three things|Three products/);
+    expect(container.innerHTML).not.toMatch(/\u2014|info@|geo@|AI-powered|Three things|Three products/);
   });
 });

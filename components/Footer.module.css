@@ -67,6 +67,7 @@
   font-size: 14px;
   color: var(--ink-2);
   text-decoration: none;
+  overflow-wrap: anywhere;
   transition: color 150ms ease;
 }
 
@@ -98,6 +99,11 @@
   .grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+  }
+
+  /* Reach us gets the full row so the email address fits on one line */
+  .col:last-child {
+    grid-column: 1 / -1;
   }
 
   .bottom {

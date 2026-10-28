@@ -32,13 +32,13 @@ describe('Contact', () => {
     expect(form).toHaveAttribute('action', 'https://formspree.io/f/mkjjbern');
   });
 
-  it('uses info@ and never a gmail address', () => {
+  it('uses the gmail contact address and never geo@ or info@', () => {
     const { container } = render(<Contact />);
-    expect(screen.getByRole('link', { name: 'info@metric-house.com' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'metrichousellc@gmail.com' })).toHaveAttribute(
       'href',
-      'mailto:info@metric-house.com'
+      'mailto:metrichousellc@gmail.com'
     );
-    expect(container.innerHTML).not.toMatch(/gmail|geo@/);
+    expect(container.innerHTML).not.toMatch(/geo@|info@/);
   });
 
   it('defaults to the GEO topic with business and town shown', () => {
@@ -125,7 +125,7 @@ describe('Contact', () => {
     expect(sentBody(fetchMock)).toMatchObject({ topic: 'Something else', _subject: 'Message from Pat' });
   });
 
-  it('shows the error with an info@ link when Formspree rejects', async () => {
+  it('shows the error with the email link when Formspree rejects', async () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: false });
     render(<Contact />);
     pickTopic(/one of the products/i);
@@ -133,7 +133,7 @@ describe('Contact', () => {
     type('you@example.com', 'pat@example.com');
     fireEvent.click(screen.getByRole('button', { name: /send/i }));
     const alert = await screen.findByRole('alert');
-    expect(alert).toHaveTextContent("That didn't go through. You can write info@metric-house.com directly.");
+    expect(alert).toHaveTextContent("That didn't go through. You can write metrichousellc@gmail.com directly.");
     expect(screen.queryByText(/reply within one business day/i)).toBeNull();
   });
 });

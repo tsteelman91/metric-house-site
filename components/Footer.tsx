@@ -48,8 +48,8 @@ export function Footer() {
           </div>
           <div className={styles.col}>
             <p className={styles.colHeading}>Reach us</p>
-            <a href="mailto:info@metric-house.com" className={styles.colLink}>
-              info@metric-house.com
+            <a href="mailto:metrichousellc@gmail.com" className={styles.colLink}>
+              metrichousellc@gmail.com
             </a>
             <span className={styles.colMuted}>Chapel Hill, NC</span>
           </div>

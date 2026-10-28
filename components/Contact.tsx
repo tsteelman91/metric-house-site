@@ -4,7 +4,6 @@ import styles from './Contact.module.css';
 export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
-      {/* TODO(tyler): confirm info@ forwards to your inbox. */}
       <div className={styles.inner}>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>§04 · Contact</p>

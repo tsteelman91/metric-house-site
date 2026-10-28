@@ -28,9 +28,9 @@ describe('Footer', () => {
     expect(screen.getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '#contact');
   });
 
-  it('renders the info@ mailto link', () => {
+  it('renders the contact mailto link', () => {
     render(<Footer />);
-    const link = screen.getByRole('link', { name: /info@metric-house\.com/i });
-    expect(link).toHaveAttribute('href', 'mailto:info@metric-house.com');
+    const link = screen.getByRole('link', { name: /metrichousellc@gmail\.com/i });
+    expect(link).toHaveAttribute('href', 'mailto:metrichousellc@gmail.com');
   });
 });

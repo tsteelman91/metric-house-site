@@ -6,7 +6,7 @@ import styles from './Contact.module.css';
 // Formspree form that receives every contact request on the site.
 export const FORMSPREE_ID = 'mkjjbern';
 export const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`;
-export const CONTACT_EMAIL = 'info@metric-house.com';
+export const CONTACT_EMAIL = 'metrichousellc@gmail.com';
 
 export const TOPICS = [
   { value: 'My business and AI search', id: 'geo' },
